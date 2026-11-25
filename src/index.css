@@ -66,6 +66,16 @@
     cursor: pointer;
   }
 
+  .grid > * {
+    min-width: 0;
+  }
+
+  input,
+  select,
+  textarea {
+    min-width: 0;
+  }
+
   button:disabled {
     cursor: not-allowed;
   }

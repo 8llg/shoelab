@@ -238,16 +238,16 @@ export function Customize() {
 
   return (
     <div className="bg-ink text-white lg:h-[calc(100dvh-68px)] lg:overflow-hidden">
-      <div className="grid lg:h-full lg:grid-cols-[1fr_440px]">
+      <div className="grid grid-cols-[minmax(0,1fr)] lg:h-full lg:grid-cols-[minmax(0,1fr)_440px]">
         <section className="sticky top-[68px] z-10 bg-ink lg:static lg:flex lg:flex-col" aria-label={t({ en: 'Preview', ar: 'المعاينة' })}>
           <div className="container-x flex items-center justify-between gap-3 pt-4 lg:w-auto lg:px-10 lg:pt-8">
             <div className="min-w-0">
-              <h1 className="truncate text-xl font-extrabold sm:text-3xl">{t({ en: 'ShoeLab Studio', ar: 'استوديو شو لاب' })}</h1>
+              <h1 className="truncate text-lg font-extrabold sm:text-3xl">{t({ en: 'ShoeLab Studio', ar: 'استوديو شو لاب' })}</h1>
               <p className="hidden text-sm text-mute sm:block">{t({ en: 'Every change shows live. Prices before VAT.', ar: 'كل تغيير يظهر مباشرة. الأسعار قبل الضريبة.' })}</p>
             </div>
             <div className="inline-flex shrink-0 rounded-full bg-white/8 p-1" role="group" aria-label={t({ en: 'View', ar: 'الزاوية' })}>
               {VIEWS.map((v) => (
-                <button key={v.id} type="button" onClick={() => setView(v.id)} aria-pressed={view === v.id} className={`h-9 rounded-full px-3.5 text-sm font-bold transition-colors sm:px-4 ${view === v.id ? 'bg-white text-ink' : 'text-mute hover:text-white'}`}>
+                <button key={v.id} type="button" onClick={() => setView(v.id)} aria-pressed={view === v.id} className={`h-9 rounded-full px-2.5 text-sm font-bold transition-colors sm:px-4 ${view === v.id ? 'bg-white text-ink' : 'text-mute hover:text-white'}`}>
                   {t(v.name)}
                 </button>
               ))}
